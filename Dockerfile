@@ -2,6 +2,7 @@ FROM maxc0c0s/odoo-build:7.0
 MAINTAINER Sebastien Delisle <seb0del@gmail.com>
 
 RUN useradd -m odoo
+RUN mkdir -p /odoo_server/community_addons
 RUN chown -R odoo:odoo /odoo_server
 
 RUN mkdir -p /entry_point_script
