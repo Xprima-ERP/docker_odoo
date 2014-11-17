@@ -10,4 +10,5 @@ Params:
 
 -s: Build and start the server.
 -b: build the buildout.
+-u: upgrade the specified database. ex. -u /in-container/config/file database-name
 no params: start an /bin/bash shell.

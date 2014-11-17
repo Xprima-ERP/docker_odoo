@@ -16,6 +16,9 @@ if [ "$1" == "-b" ]; then
 elif [ "$1" == "-s" ]; then
 	build $2
 	bin/start_odoo
+elif [ "$1" == "-u" ]; then
+	build $2
+	bin/upgrade_odoo -d $3
 else
 	/bin/bash
 fi
