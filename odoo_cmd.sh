@@ -6,7 +6,7 @@ function build {
 	if [ $1  ]; then
 		config_file=$1
 	else
-		config_file="buildout.cfg"
+		config_file="init_versions.cfg"
 	fi
 	$BUILDOUT_CMD $config_file
 }
