@@ -9,5 +9,5 @@ Usage:
     Params:
      - -s: Build and start the server.
      - -b: build the buildout.
-     - -u: upgrade the specified database. ex. -u /in-container/config/file database-name
+     - -u: upgrade the specified database. ex. -u database-name /in-container/config/file
       no params: start an /bin/bash shell.

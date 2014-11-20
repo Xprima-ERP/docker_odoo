@@ -17,8 +17,8 @@ elif [ "$1" == "-s" ]; then
 	build $2
 	bin/start_odoo
 elif [ "$1" == "-u" ]; then
-	build $2
-	bin/upgrade_odoo -d $3
+	build $3
+	bin/upgrade_odoo -d $2
 else
 	/bin/bash
 fi
