@@ -1,10 +1,9 @@
-Docker Odoo
-===========
+# Docker Odoo
+
 This image is based on maxc0c0s/odoo-build:u1404_o70_ar186.
 
-Entrypoint Usage
-^^^^^^^^^^^^^^^^^^^^^
-**usage**: 
+## Entrypoint Usage
+###usage: 
  odoo_cmd.sh [options] config_file
 
  This script is a Docker entry point to use with the image maxc0c0s/odoo.
