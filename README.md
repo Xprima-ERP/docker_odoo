@@ -1,12 +1,12 @@
 # Docker Odoo
 
-This image is based on maxc0c0s/odoo-build:u1404_o70_ar186.
+This image is based on xprimaerp/odoo-build:u1404_o70_ar186.
 
 ## Entrypoint Usage
 ###usage: 
  odoo_cmd.sh [options] config_file
 
- This script is a Docker entry point to use with the image maxc0c0s/odoo.
+ This script is a Docker entry point to use with the image xprimaerp/odoo.
 
  config_file: The path of the buildout config file.
 

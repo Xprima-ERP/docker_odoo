@@ -1,4 +1,4 @@
-FROM maxc0c0s/odoo-build:u1404_o70_ar186
+FROM xprimaerp/odoo-build:u1404_o70_ar186
 MAINTAINER Sebastien Delisle <seb0del@gmail.com>
 
 RUN useradd -m odoo
