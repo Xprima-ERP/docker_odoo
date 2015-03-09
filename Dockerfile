@@ -1,7 +1,7 @@
 FROM xprimaerp/odoo-build:u1404_o80_ar191
 MAINTAINER Sebastien Delisle <seb0del@gmail.com>
 
-RUN useradd -m odoo
+RUN adduser --system --shell /bin/bash --group odoo
 RUN mkdir -p /odoo_server/community_addons
 RUN chown -R odoo:odoo /odoo_server
 
