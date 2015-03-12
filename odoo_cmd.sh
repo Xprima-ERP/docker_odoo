@@ -20,16 +20,16 @@ This script is a Docker entry point to use with the image maxc0c0s/odoo.
 config_file: The path of the buildout config file.
 
 OPTIONS:
-   -b                   Build using Anybox recipe
-   -c                   Start command line /bin/bash
-   -h                   Show this message
-   -s                   Build and start the odoo server
-   -t                   Build, create a test tb, run the tests, drop the test db
-   -u database_name     Build and update the database
+   -b                   		Build using Anybox recipe
+   -c                   		Start command line /bin/bash
+   -h                   		Show this message
+   -s                   		Build and start the odoo server
+   -t comma separated module list       Build, create a test tb, run the tests, drop the test db
+   -u database_name     		Build and update the database
 END
 }
 
-OPTSTRING=":bchstu:"
+OPTSTRING=":bchst:u:"
 
 # Get the indice of the config_file. It should be afte all the options.
 while getopts $OPTSTRING opt; do
@@ -64,7 +64,7 @@ while getopts $OPTSTRING opt; do
 			;;
 		u)
 			build $config_file
-			bin/upgrade_odoo -d $OPTARG
+			bin/start_odoo --stop-after-init -d $OPTARG -u all
 			;;
 		c)
 			/bin/bash
@@ -75,8 +75,7 @@ while getopts $OPTSTRING opt; do
 		t)
 			build $config_file
 			bin/create_db_odoo $UNITTEST_DB_NAME
-			bin/upgrade_odoo -d $UNITTEST_DB_NAME
-			bin/test_odoo -d $UNITTEST_DB_NAME -u all
+			bin/start_odoo --stop-after-init --test-enable -d $UNITTEST_DB_NAME -i $OPTARG
 			bin/drop_db_odoo $UNITTEST_DB_NAME
 			;;
 		\?)
