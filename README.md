@@ -1,6 +1,6 @@
 # Docker Odoo
 
-This image is based on xprimaerp/odoo-build:u1404_o70_ar186.
+This image is based on xprimaerp/odoo-deps.
 
 ## Entrypoint Usage
 ###usage: 
@@ -19,6 +19,6 @@ This image is based on xprimaerp/odoo-build:u1404_o70_ar186.
              
     -s  Build and start the odoo server
                 
-    -t  Build, create a test tb, run the tests, drop the test db
+    -t  LIST(comma separated module list) Build, create a test tb, run the tests, drop the test db
                    
-    -u  database_name Build and update the database
+    -u  DBNAME(database_name) Build and update the database
