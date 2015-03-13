@@ -24,7 +24,7 @@ OPTIONS:
    -c                   			Start command line /bin/bash
    -h                   			Show this message
    -s                   			Build and start the odoo server
-   -t (LIST comma separated module list)       	Build, create a test tb, run the tests, drop the test db
+   -t LIST(comma separated module list)       	Build, create a test tb, run the tests, drop the test db
    -u DBNAME(database_name)     		Build and update the database
 END
 }
