@@ -4,6 +4,7 @@ MAINTAINER Sebastien Delisle <seb0del@gmail.com>
 RUN adduser --system --shell /bin/bash --group odoo
 
 RUN apt-get install -y git
+RUN apt-get install jira
 
 RUN mkdir -p /entry_point_script
 COPY odoo_cmd.sh /entry_point_script/
