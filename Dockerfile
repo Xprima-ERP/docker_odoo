@@ -4,7 +4,7 @@ MAINTAINER Sebastien Delisle <seb0del@gmail.com>
 RUN adduser --system --shell /bin/bash --group odoo
 
 RUN apt-get install -y git
-RUN apt-get install python-pip
+RUN apt-get install -y python-pip
 
 RUN mkdir -p /entry_point_script
 COPY odoo_cmd.sh /entry_point_script/
