@@ -19,6 +19,5 @@ USER odoo
 
 WORKDIR /odoo_server
 RUN python bootstrap-buildout.py
-RUN bin/buildout -c init_versions.cfg
 
 ENTRYPOINT ["/entry_point_script/odoo_cmd.sh"]
