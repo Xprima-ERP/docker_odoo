@@ -4,7 +4,9 @@ MAINTAINER Sebastien Delisle <seb0del@gmail.com>
 RUN adduser --system --shell /bin/bash --group odoo
 
 RUN apt-get install -y git
+
 RUN apt-get install -y python-pip
+RUN pip install jira
 
 RUN mkdir -p /entry_point_script
 COPY odoo_cmd.sh /entry_point_script/
@@ -20,7 +22,6 @@ USER odoo
 
 WORKDIR /odoo_server
 RUN python bootstrap-buildout.py
-RUN pip install jira
 RUN bin/buildout -c init_versions.cfg
 
 ENTRYPOINT ["/entry_point_script/odoo_cmd.sh"]
